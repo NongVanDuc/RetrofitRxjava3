@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements IOnFetchPost {
         myAPI = retrofit.create(IMyAPI.class);
         mCompositeDisposable = new CompositeDisposable();
         mFetchDataPresenter = new FetchDataPresenter(mCompositeDisposable,myAPI,this);
+        // fetch data API
         mFetchDataPresenter.fetchPost();
         //initData();
     }
